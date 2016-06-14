@@ -12,13 +12,30 @@ namespace GoWithTheFlow
         {
             Console.WriteLine("Lamp doesn't work?");
             Console.WriteLine("Is lamp plugged in?");
-            string answerYes = Console.ReadLine();
-            if (answerYes == "yes")
+            string answer = Console.ReadLine();
+
+            if (answer.ToLower() == "yes")
             {
                 Console.WriteLine("Is bulb burned out?");
-
+                answer = Console.ReadLine();
             }
-            Console.ReadLine();
+
+            else
+            {
+                Console.WriteLine("Plug the lamp in!");
+            }
+
+
+            if (answer.ToLower() == "yes")
+            { Console.WriteLine("Replace bulb.");
+            }
+
+            else
+            {
+                Console.WriteLine("Repair your lamp");
+            }
+
+             
 
             Console.ReadKey();
         }
